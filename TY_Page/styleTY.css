@@ -1,0 +1,188 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "heeboBold";
+  src: url(../fonts/Heebo-Bold.ttf);
+}
+
+@font-face {
+  font-family: "heeboRegular";
+  src: url(../fonts/Heebo-Regular.ttf);
+}
+
+@font-face {
+  font-family: "brownProBolt";
+  src: url(../fonts/BrownPro-Bold.ttf);
+}
+
+html {
+  width:100vw;
+  overflow-x:hidden; 
+}
+
+.container {                                                                                                                       /*CONTAINER*/     
+  position: absolute;
+  width: 1920px;
+  height: 100%;
+  background: url('imgTY/containerBGnew.png'), url('imgTY/contentBG.png') center 165px no-repeat, #752157;
+}
+
+.container header a {
+  position: relative;
+  top: 40px;
+  right: 1679px;
+  float: right;
+}
+
+.container .content {                                                                                                                /*content*/
+  position: relative;
+  top: 50%;
+  width: 406px;
+  height: 311px;
+  margin: 0 auto;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+
+.container .content .topText {
+  padding-bottom: 15px;
+  border-bottom: 3px solid #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container .content .topText p {
+  font-size: 60px;
+  line-height: 60px;
+  font-family: "heeboBold";
+}
+
+.container .content .lowText {
+  padding-top: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container .content .lowText p {
+  font-size: 32px;
+  line-height: 40px;
+  font-family: "heeboRegular";
+}
+
+.container .shadow {                                                                                                                  /*shadow*/
+  position: fixed;                             
+  bottom: 0px;
+  z-index: 2;
+  height: 200px;
+  width: 1920px;
+  background: linear-gradient(rgba(117,33,87,0), rgba(72, 13, 47,0.8) 90%);
+}
+
+@media screen and (max-width: 360px){                                                                                        /*media query_360*/
+  .container {
+    position: absolute;
+    width: 360px;
+    height: 100%;
+    background-size: 365%;
+  }
+
+  .container header a {
+    position: relative;
+    top: 15px;
+    right: 272px;
+  }
+
+  .container header a img {
+    width: 68px;
+    height: 26px;
+  }
+
+  .container .content {                                                                                                          /*content_360*/
+    position: relative;
+    top: 220px;
+    width: 320px;
+    height: 311px;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    color: #fff;
+  }
+
+  .container .content .topText {
+    width: 320px;
+    padding-bottom: 15px;
+    display: inline-block;
+    border-bottom: 3px solid #fff;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; 
+  }
+  
+  .container .content .topText p {
+    font-size: 32px;
+    line-height: 34px;
+    /* font-family: "brownProBolt"; */
+    font-family: "heeboBold";
+  }
+  
+  .container .content .lowText {
+    padding-top: 15px;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  .container .content .lowText p {
+    font-size: 24px;
+    line-height: 26px;
+    font-family: "heeboRegular";
+  }
+
+  .container .shadow {                                                                                                            /*shadow_360*/
+    display: none;
+  }
+}
